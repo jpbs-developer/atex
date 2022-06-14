@@ -17,9 +17,25 @@ $my-theme: mat.define-light-theme((color: (primary: $my-warn,
 html,
 body {
     height: 100%;
+
+
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-expansion-panel-header {
+    padding: 0 12px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: #E9E9E9 !important;
+}
+
+.no-padding {
+    .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+    }
 }

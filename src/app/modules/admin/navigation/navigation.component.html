@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <div class="my-10 px-10">
+      <div>
+        <img src="assets/img/logo.png" alt="Logo do Terex">
+      </div>
+    </div>
+    <div class="px-2 flex items-center gap-x-3 border-b-2 pb-4">
+      <div><img src="assets/img/profile.png" alt=""></div>
+      <p class="text-Dark_Grey_ATEX font-bold">Cláudia Medeiros</p>
+    </div>
+    <nav class="pt-5">
+      <ul>
+        <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
+          hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
+          [routerLink]="['dashboard']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'"
+          #dashboardActive="routerLinkActive">
+          <img src="assets/icons/dashboard.svg" *ngIf="dashboardActive" alt="Dashboard icon">
+          <img src="assets/icons/dashboard-gray.svg" *ngIf="!dashboardActive" alt="Dashboard cinza icon">
+          <span>Dashboard</span>
+        </li>
+        <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
+          hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
+          [routerLink]="['contratos']" routerLinkActive #contratosActive="routerLinkActive">
+          <img src="assets/icons/dashboard.svg" *ngIf="contratosActive.isActive" alt="Dashboard icon">
+          <img src="assets/icons/dashboard-gray.svg" *ngIf="!contratosActive.isActive" alt="Dashboard cinza icon">
+          <span>Contratos</span>
+        </li>
+      </ul>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <div class="px-2">
+      <button *ngIf="!drawer.opened" type="button" aria-label="Toggle sidenav" mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <button *ngIf="drawer.opened" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+      </button>
+    </div> -->
+    <div class="pl-5">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

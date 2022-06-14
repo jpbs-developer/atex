@@ -1,0 +1,52 @@
+<div class="grid grid-cols-12 gap-5">
+    <div class="bg-white col-span-9 py-10 px-3">
+        <section>
+            <h2 class="text-Dark_Grey_ATEX text-xl font-bold">Agendamentos</h2>
+            <div class="grid grid-cols-3 gap-5 my-10">
+                <app-dashboard-card *ngFor="let card of cards" [data]="card"></app-dashboard-card>
+            </div>
+        </section>
+        <section>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-5">
+                    <h2 class="text-Dark_Grey_ATEX text-base font-bold">Solicitações</h2>
+                    <p class="text-sm underline cursor-pointer font-normal">Ver todas</p>
+                </div>
+                <div class="flex items-center justify-center gap-5">
+                    <mat-form-field class="no-padding">
+                        <mat-label>Filial</mat-label>
+                        <mat-select class="bg-atex_light_gray">
+                            <mat-option value="1">Filial 1</mat-option>
+                            <mat-option value="2">Filial 2</mat-option>
+                            <mat-option value="3">Filial 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <div class="flex items-center gap-6">
+                        <img class="cursor-pointer" src="assets/icons/filter-arrow-left.svg" alt="">
+                        <img class="cursor-pointer" src="assets/icons/filter-arrow-right.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-3 gap-5 mt-5">
+                <app-dashboard-request-card *ngFor="let request of requests" [data]="request">
+                </app-dashboard-request-card>
+            </div>
+        </section>
+        <section class="mt-10">
+            <h2 class="text-Dark_Grey_ATEX text-base font-bold">Pedidos de Orçamento</h2>
+            <div class="grid grid-cols-3 gap-5 mt-3">
+                <app-dashboard-card *ngFor="let budget of budgets" [data]="budget"></app-dashboard-card>
+            </div>
+        </section>
+        <section class="mt-10">
+            <h2 class="text-Dark_Grey_ATEX text-base font-bold">Finanças</h2>
+            <div class="grid grid-cols-3 gap-5 mt-3">
+                <app-dashboard-card *ngFor="let finance of finances" [data]="finance"></app-dashboard-card>
+            </div>
+        </section>
+    </div>
+    <div class="bg-white col-span-3">
+
+    </div>
+</div>
