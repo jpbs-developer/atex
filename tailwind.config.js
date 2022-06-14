@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'Atex_blue': '#138EFF',
-        'Dark_Grey_ATEX': '#404449'
+        'Dark_Grey_ATEX': '#404449',
+        'black_button': '#141414',
+        'gray_Atex': '#B5B5B5'
       }
     },
   },
