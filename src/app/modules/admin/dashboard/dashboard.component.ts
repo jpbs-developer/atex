@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CalendarHeaderComponent } from '../../shared/calendar-header/calendar-header.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class DashboardComponent implements OnInit {
+  calendarHeader = CalendarHeaderComponent;
+
+  date = new Date();
   cards = [
     {
       icon: 'assets/icons/arrow_left.svg',
@@ -141,4 +145,27 @@ export class DashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  get currentDate() {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = this.getMonth(currentDate.getMonth() + 1);
+    const year = currentDate.getFullYear();
+    console.log(day, month, year);
+
+    return `Hoje - ${day} de ${month} de ${year}`;
+  }
+
+  getMonth(month: number) {
+    let currentMonth = '';
+    switch (month) {
+      case 1:
+        currentMonth = 'Janeiro';
+        break;
+      case 6:
+        currentMonth = 'Junho';
+    }
+
+    return currentMonth;
+  }
 }

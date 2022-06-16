@@ -6,6 +6,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardCardComponent } from './dashboard-card/dashboard-card.component';
 import { DashboardRequestCardComponent } from './dashboard-request-card/dashboard-request-card.component';
+import { CalendarHeaderComponent } from '../../shared/calendar-header/calendar-header.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DashboardRequestCardComponent } from './dashboard-request-card/dashboar
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    CalendarHeaderComponent
   ]
 })
 export class DashboardModule { }

@@ -46,7 +46,30 @@
             </div>
         </section>
     </div>
-    <div class="bg-white col-span-3">
+    <div class="bg-white col-span-3 p-3">
+        <h4 class="mb-5 text-Dark_Grey_ATEX font-bold text-xl">{{ currentDate }}</h4>
+        <mat-card class="demo-inline-calendar-card mat-elevation-z0 w-full bg-atex_light_gray">
+            <mat-calendar [selected]="date" [headerComponent]="calendarHeader"></mat-calendar>
+        </mat-card>
 
+        <div class="flex items-center justify-between mt-10 mb-3">
+            <h2 class="text-Dark_Grey_ATEX text-base font-bold">Solicitações</h2>
+            <p class="text-sm text-atex_orange underline cursor-pointer font-normal">Ver todas</p>
+        </div>
+        <div>
+            <mat-card class="bg-atex_light_gray mat-elevation-z0 mb-3" *ngFor="let temp of [1,2,4,4,4,4]">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <img src="assets/img/profile.png" alt="">
+                        <div>
+                            <p class="text-sm text-Dark_Grey_ATEX font-bold">{{ 'João'}} solicita orçamento</p>
+                            <p class="text-sm text-Dark_Grey_ATEX">Fulano X</p>
+                            <span class="text-atex_cinza_terroso text-xs">05.12.21 - </span> 
+                            <span class="text-atex_cinza_terroso text-xs">15:40</span>
+                        </div>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
     </div>
 </div>
