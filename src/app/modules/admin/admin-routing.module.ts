@@ -25,6 +25,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./contracts/contracts.module').then((m) => m.ContractsModule),
       },
+      {
+        path: 'agendamentos',
+        loadChildren: () =>
+          import('./schedules/schedules.module').then((m) => m.SchedulesModule),
+      },
     ],
   },
 ];

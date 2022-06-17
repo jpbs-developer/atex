@@ -1,8 +1,10 @@
-<h2 class="text-xl text-Dark_Grey_ATEX font-bold mb-5 text-center">Tem certeza que deseja
-    alterar a senha?</h2>
+<h2 class="text-xl text-Dark_Grey_ATEX font-bold mb-5 text-center">{{ data.text }}</h2>
+
+<p *ngIf="data.date" class="text-center text-atex_cinza_terroso mb-5">Nova data:{{ data.date}}</p>
+
 <div class="flex items-center gap-2">
     <button mat-stroked-button type="button" (click)="onNoClick()" class="text-black_button w-full">
         Voltar</button>
-    <button mat-stroked-button mat-dialog-close type="button" class="bg-black_button text-white w-full">
+    <button mat-stroked-button [mat-dialog-close]="'change'" type="button" class="bg-black_button text-white w-full">
         Alterar</button>
 </div>

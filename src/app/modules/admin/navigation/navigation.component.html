@@ -13,6 +13,7 @@
     </div>
     <nav class="pt-5">
       <ul>
+
         <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
           hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
           [routerLink]="['dashboard']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'"
@@ -21,13 +22,41 @@
           <img src="assets/icons/dashboard-gray.svg" *ngIf="!dashboardActive.isActive" alt="Dashboard cinza icon">
           <span>Dashboard</span>
         </li>
+
         <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
           hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
-          [routerLink]="['contratos']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #contratosActive="routerLinkActive">
+          [routerLink]="['contratos']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'"
+          #contratosActive="routerLinkActive">
           <img src="assets/icons/contracts.svg" *ngIf="contratosActive.isActive" alt="Contratos icon">
           <img src="assets/icons/contracts-gray.svg" *ngIf="!contratosActive.isActive" alt="Contratos cinza icon">
           <span>Contratos</span>
         </li>
+
+        <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
+        hover:text-atex_orange cursor-pointer"
+          [ngClass]="{ 'text-atex_orange bg-atex_light_orange': scheduleActive.isActive}">
+
+          <div class="flex flex-col">
+            <div class="flex items-center gap-5 text-sm font-normal mb-2 " [routerLink]="['agendamentos']"
+              [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #scheduleActive="routerLinkActive">
+              <img src="assets/icons/calendar.svg" *ngIf="scheduleActive.isActive" alt="Contratos icon">
+              <img src="assets/icons/calendar-gray.svg" *ngIf="!scheduleActive.isActive" alt="Contratos cinza icon">
+              <div class="flex items-center gap-2">
+                <span>Agendamentos</span>
+                <img src="assets/icons/down.svg" alt="" *ngIf="scheduleActive.isActive">
+              </div>
+            </div>
+            <div *ngIf="scheduleActive.isActive">
+              <ul class="flex flex-col gap-2">
+                <li [routerLink]="['agendamentos/retiradas']" routerLinkActive="font-bold">Retiradas</li>
+                <li [routerLink]="['agendamentos/devolucoes']" routerLinkActive="font-bold">Devoluções</li>
+              </ul>
+            </div>
+          </div>
+
+        </li>
+
+
       </ul>
     </nav>
   </mat-sidenav>

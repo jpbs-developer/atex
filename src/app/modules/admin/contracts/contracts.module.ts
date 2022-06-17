@@ -9,7 +9,11 @@ import { ContractDetailsComponent } from './contract-details/contract-details.co
 import { RequestHistoryComponent } from './request-history/request-history.component';
 
 @NgModule({
-  declarations: [ContractsComponent, ContractDetailsComponent, RequestHistoryComponent, ],
+  declarations: [
+    ContractsComponent,
+    ContractDetailsComponent,
+    RequestHistoryComponent,
+  ],
   imports: [
     CommonModule,
     ContractsRoutingModule,

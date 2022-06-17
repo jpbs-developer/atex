@@ -1,0 +1,22 @@
+<h2 class="text-xl text-Dark_Grey_ATEX font-bold mb-5 text-center">Selecione um dos dias abaixo
+    para alterar a data da retirada</h2>
+<mat-card class="demo-inline-calendar-card mat-elevation-z0 w-full bg-atex_light_gray">
+    <mat-calendar [selected]="date" [headerComponent]="calendarHeader"></mat-calendar>
+    <div class="flex items-center gap-5 pl-4">
+        <div>
+            <p>De</p>
+            <input class="input" type="text" />
+        </div>
+        <div class="mt-5"> <img src="assets/icons/arrow-right.svg" alt=""> </div>
+        <div>
+            <p for="">Até</p>
+            <input class="input" type="text">
+        </div>
+    </div>
+</mat-card>
+<div class="flex items-center gap-2 mt-3">
+    <button mat-stroked-button type="button" class="text-black_button w-full">
+        Voltar</button>
+    <button mat-stroked-button [mat-dialog-close]="'change'" type="button" class="bg-black_button text-white w-full">
+        Alterar</button>
+</div>
