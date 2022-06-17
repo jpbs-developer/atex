@@ -23,9 +23,9 @@
         </li>
         <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
           hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
-          [routerLink]="['contratos']" routerLinkActive #contratosActive="routerLinkActive">
-          <img src="assets/icons/dashboard.svg" *ngIf="contratosActive.isActive" alt="Dashboard icon">
-          <img src="assets/icons/dashboard-gray.svg" *ngIf="!contratosActive.isActive" alt="Dashboard cinza icon">
+          [routerLink]="['contratos']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #contratosActive="routerLinkActive">
+          <img src="assets/icons/contracts.svg" *ngIf="contratosActive.isActive" alt="Contratos icon">
+          <img src="assets/icons/contracts-gray.svg" *ngIf="!contratosActive.isActive" alt="Contratos cinza icon">
           <span>Contratos</span>
         </li>
       </ul>

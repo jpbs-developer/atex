@@ -9,16 +9,21 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
-        path: 'dashboard',
-        loadChildren: () =>
-          import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
-      },
-      {
         path: 'minha-conta',
         loadChildren: () =>
           import('./my-account/my-account.module').then(
             (m) => m.MyAccountModule
           ),
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      },
+      {
+        path: 'contratos',
+        loadChildren: () =>
+          import('./contracts/contracts.module').then((m) => m.ContractsModule),
       },
     ],
   },

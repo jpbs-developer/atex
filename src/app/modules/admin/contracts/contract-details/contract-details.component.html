@@ -1,0 +1,68 @@
+<div class="bg-white col-span-9 py-10 px-3 h-full">
+    <h2 class="text-Dark_Grey_ATEX text-xl font-bold mb-5">Todos os produtos: Contrato 65434567 - ED.Martinelli</h2>
+    <mat-form-field class="no-padding w-1/3">
+        <mat-label>Buscar...</mat-label>
+        <input type="text" matInput>
+        <mat-icon class="text-atex_orange" matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <section>
+        <h2 class="text-Dark_Grey_ATEX font-bold mb-5">Detalhes da obra</h2>
+        <div class="flex items-center gap-10">
+            <div class="flex items-center gap-3">
+                <div class="p-5 bg-atex_light_orange rounded-lg">
+                    <img src="assets/icons/location.svg" alt="">
+                </div>
+                <div>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Responsável da Obra: </p>
+                    <p class="text-gray_Atex text-sm">Brito (Mestre de obras)</p>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Iniciada em: <span
+                            class="text-gray_Atex font-normal">09.07.21</span></p>
+
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="p-5 bg-atex_light_orange rounded-lg">
+                    <img src="assets/icons/location.svg" alt="">
+                </div>
+                <div>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Endereço: </p>
+                    <p class="text-gray_Atex text-sm">R. Ramira Rodrigues Zaccardi, 422</p>
+                    <p class="text-gray_Atex text-sm">Jardim Ponte Alta I - Guarulhos - SP, CEP.:
+                        07179-201</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="p-5 bg-atex_light_orange rounded-lg">
+                    <img src="assets/icons/location.svg" alt="">
+                </div>
+                <div>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Unidade ATEX: </p>
+                    <p class="text-gray_Atex text-sm">R. Rosa Mafei, 399 - Bonsucesso
+                        Guarulhos - SP, CEP.: 07177-110, </p>
+                    <p class="text-gray_Atex text-sm">J(11) 2438-6001</p>
+                </div>
+            </div>
+        </div>
+        <div class="h-1 my-5 bg-atex_cinza_terroso"></div>
+    </section>
+
+    <section class="grid grid-cols-3 gap-3">
+        <mat-card class="bg-card-gray mat-elevation-z0" *ngFor="let temp of [1,1,1,1,1,1,1,1,1,1,1,1]">
+            <div class="flex items-center gap-2">
+                <div class="bg-white p-2 flex items-center justify-center rounded-lg">
+                    <img src="assets/img/espacadores.png" alt="">
+                </div>
+                <div>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Código do produto: <span
+                            class="text-gray_Atex font-normal">F616121</span></p>
+                    <p class="text-sm text-Dark_Grey_ATEX font-bold">Descrição:<span class="text-gray_Atex font-normal">
+                            610x610x210 </span></p>
+                    <p class="text-sm text-atex_orange font-normal">Quantidade:<span class=" font-bold"> 789 </span></p>
+
+                </div>
+            </div>
+        </mat-card>
+    </section>
+
+</div>
