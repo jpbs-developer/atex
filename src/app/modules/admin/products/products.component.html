@@ -1,0 +1,61 @@
+<div class="bg-white col-span-9 py-10 px-3 h-screen">
+    <h2 class="text-Dark_Grey_ATEX text-xl font-bold mb-5">Contratos</h2>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between">
+            <mat-form-field class="no-padding">
+                <mat-label>Buscar...</mat-label>
+                <input type="text" matInput>
+                <mat-icon class="text-atex_orange" matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="flex items-center gap-3">
+            <mat-form-field class="no-padding">
+                <mat-label>Categoria</mat-label>
+                <mat-select>
+                    <mat-option value="1">Castegoria 1</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="no-padding"> 
+                <mat-label>Subcategoria</mat-label>
+                <mat-select>
+                    <mat-option value="1">Subcategoria 1</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <section class="mt-5">
+        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z0">
+            <ng-container matColumnDef="contract">
+                <th mat-header-cell *matHeaderCellDef> Código Produto </th>
+                <td mat-cell *matCellDef="let element"> 593321756 </td>
+            </ng-container>
+            <ng-container matColumnDef="name_of_work">
+                <th mat-header-cell *matHeaderCellDef> Categoria </th>
+                <td mat-cell *matCellDef="let element"> Laje Nervurada </td>
+            </ng-container>
+            <ng-container matColumnDef="date_init">
+                <th mat-header-cell *matHeaderCellDef> Subcategoria </th>
+                <td mat-cell *matCellDef="let element">Bidirecional </td>
+            </ng-container>
+            <ng-container matColumnDef="contract_of_work">
+                <th mat-header-cell *matHeaderCellDef> Descrição </th>
+                <td mat-cell *matCellDef="let element"> FORMA ATEX 610X610X210 </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-slide-toggle></mat-slide-toggle>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay" class="bg-black_atex text-white text-sm font-bold">
+            </tr>
+            <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row ">
+            </tr>
+        </table>
+
+    </section>
+</div>
