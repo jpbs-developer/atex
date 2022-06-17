@@ -42,10 +42,14 @@ export class MyAccountComponent implements OnInit {
   openChagePhotoModal() {
     const dialogRef = this.dialog.open(DragDropFileModalComponent, {
       width: '700px',
+      data: {
+        text: 'Alterar imagem de perfil',
+      },
     });
 
     dialogRef.afterClosed().subscribe({
       next: (res) => {
+        if(!res) return
         if (res === 'success') {
           this.openModalStatus(res, 'Senha alterada com sucesso!');
         } else {
@@ -63,10 +67,10 @@ export class MyAccountComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe({
       next: (res) => {
-        if(res === 'try again'){
-          this.openChagePhotoModal()
+        if (res === 'try again') {
+          this.openChagePhotoModal();
         }
-      }
-    })
+      },
+    });
   }
 }

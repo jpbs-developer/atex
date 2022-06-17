@@ -56,13 +56,20 @@
 
         </li>
 
-
         <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
         hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal" [routerLink]="['produtos']"
           [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #productsActive="routerLinkActive">
           <img src="assets/icons/products.svg" *ngIf="productsActive.isActive" alt="Contratos icon">
           <img src="assets/icons/products-gray.svg" *ngIf="!productsActive.isActive" alt="Contratos cinza icon">
           <span>Produtos</span>
+        </li>
+
+        <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
+        hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal" [routerLink]="['financas']"
+          [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #financeActive="routerLinkActive">
+          <img src="assets/icons/finance.svg" *ngIf="financeActive.isActive" alt="Contratos icon">
+          <img src="assets/icons/finance-gray.svg" *ngIf="!financeActive.isActive" alt="Contratos cinza icon">
+          <span>Finanças</span>
         </li>
 
 

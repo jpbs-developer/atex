@@ -1,4 +1,4 @@
-<h2 class="text-xl text-Dark_Grey_ATEX font-bold mb-2">Alterar imagem de perfil</h2>
+<h2 class="text-xl text-Dark_Grey_ATEX font-bold mb-2">{{ data.text }}</h2>
 <p class="text-atex_red text-xs text-right mb-1" *ngIf="!preview">*Selecione pelo menos um</p>
 <div class="border-4 border-Dark_Grey_ATEX border-dashed p-4" [ngClass]="{ 'border-atex_red': !preview}" appDnd
 	(fileDropped)="onFileDropped($event)">
