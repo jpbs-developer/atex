@@ -15,7 +15,8 @@ module.exports = {
         'atex_light_gray': '#E9E9E9',
         'light_green_atex': '#CDF1CC',
         'green_atex': '#57CC5B',
-        'atex_cinza_terroso': '#968D8D'
+        'atex_cinza_terroso': '#968D8D',
+        'atex_red': '#FF5050'
       }
     },
   },

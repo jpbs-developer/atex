@@ -1,0 +1,13 @@
+<div *ngIf="data.status === 'success'" class="flex items-center justify-center flex-col gap-5">
+    <img class="mx-auto mb-2" src="assets/img/success.png" alt="Icone de sucesso">
+    <h4 class="text-xl font-bold pb-10 text-Dark_Grey_ATEX text-center">{{ data.text}} </h4>
+</div>
+
+<div *ngIf="data.status === 'error'">
+    <img class="mx-auto" src="assets/icons/error.svg" alt="Icone de erro">
+    <h4 class="text-xl font-bold my-2 text-Dark_Grey_ATEX text-center">{{ data.text}}</h4>
+    <p class="text-center text-gray_Atex mb-5">Não foi possível processar a solicitação
+        no momento. Tente novamente mais tarde</p>
+    <button mat-raised-button [mat-dialog-close]="'try again'" class="bg-black_button text-white w-full">Tentar
+        novamente</button>
+</div>

@@ -13,6 +13,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
       },
+      {
+        path: 'minha-conta',
+        loadChildren: () =>
+          import('./my-account/my-account.module').then(
+            (m) => m.MyAccountModule
+          ),
+      },
     ],
   },
 ];

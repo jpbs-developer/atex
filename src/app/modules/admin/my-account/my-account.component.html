@@ -1,0 +1,63 @@
+<div class="bg-white col-span-9 p-10 h-screen">
+    <h2 class="text-Dark_Grey_ATEX text-xl font-bold mb-5">Minha conta</h2>
+
+    <section class="flex items-center gap-3 mb-10">
+        <div class="text-center">
+            <img class="w-24" src="assets/img/profile.png" alt="">
+            <p class="text-sm text-atex_orange cursor-pointer underline mt-2" (click)="openChagePhotoModal()">Alterar
+                Foto</p>
+        </div>
+        <div>
+            <p class="text-Dark_Grey_ATEX text-xl font-bold">Cláudia Medeiros</p>
+            <p class="text-sm text-atex_orange">Função {{ 'General Latam'}}</p>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 gap-5">
+        <div>
+            <h5 class="text-Dark_Grey_ATEX font-bold mb-3">Dados Gerais</h5>
+
+            <div class="flex flex-col">
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input type="text" matInput value="Cláudia Medeiros de Sousa" [readonly]="nameControl">
+
+                    <button mat-icon-button matSuffix (click)="nameControl = !nameControl"
+                        [attr.aria-label]="'Editar campo de nome'" [attr.aria-pressed]="nameControl">
+                        <img src="assets/icons/edit.svg" matSuffix alt="">
+                    </button>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Cargo</mat-label>
+                    <input type="text" matInput value="Função General Latam" [readonly]="cargoControl">
+                    <button mat-icon-button matSuffix (click)="cargoControl = !cargoControl"
+                        [attr.aria-label]="'Edita campo de cargo'" [attr.aria-pressed]="cargoControl">
+                        <img src="assets/icons/edit.svg" matSuffix alt="">
+                    </button>
+                </mat-form-field>
+            </div>
+
+
+        </div>
+        <div>
+            <h5 class="text-Dark_Grey_ATEX font-bold mb-3">Dados de Acesso</h5>
+
+            <div class="flex flex-col">
+                <mat-form-field>
+                    <mat-label>Tipo de Usuário</mat-label>
+                    <mat-select value="1">
+                        <mat-option value="1">Administrador</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput value="teste@email.com" readonly>
+                </mat-form-field>
+            </div>
+            <p class="text-sm text-atex_orange cursor-pointer underline text-right" (click)="openChangePasswordModal()">
+                Alterar Senha</p>
+        </div>
+    </section>
+</div>

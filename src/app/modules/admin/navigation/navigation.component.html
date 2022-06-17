@@ -6,9 +6,10 @@
         <img src="assets/img/logo.png" alt="Logo do Terex">
       </div>
     </div>
-    <div class="px-2 flex items-center gap-x-3 border-b-2 pb-4">
-      <div><img src="assets/img/profile.png" alt=""></div>
-      <p class="text-Dark_Grey_ATEX font-bold">Cláudia Medeiros</p>
+    <div class="px-2 flex items-center gap-x-3 border-b-2 pb-4 cursor-pointer text-Dark_Grey_ATEX"
+      [routerLink]="['minha-conta']" [routerLinkActive]="'text-atex_orange'">
+      <div><img src="assets/img/profile.png" alt="Imagem do usuário"></div>
+      <p class=" font-bold">Cláudia Medeiros</p>
     </div>
     <nav class="pt-5">
       <ul>
@@ -16,8 +17,8 @@
           hover:text-atex_orange cursor-pointer flex items-center gap-5 text-sm font-normal"
           [routerLink]="['dashboard']" [routerLinkActive]="'text-atex_orange bg-atex_light_orange'"
           #dashboardActive="routerLinkActive">
-          <img src="assets/icons/dashboard.svg" *ngIf="dashboardActive" alt="Dashboard icon">
-          <img src="assets/icons/dashboard-gray.svg" *ngIf="!dashboardActive" alt="Dashboard cinza icon">
+          <img src="assets/icons/dashboard.svg" *ngIf="dashboardActive.isActive" alt="Dashboard icon">
+          <img src="assets/icons/dashboard-gray.svg" *ngIf="!dashboardActive.isActive" alt="Dashboard cinza icon">
           <span>Dashboard</span>
         </li>
         <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
