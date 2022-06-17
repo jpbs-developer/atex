@@ -72,6 +72,32 @@
           <span>Finanças</span>
         </li>
 
+        <li class="w-full p-3 text-Dark_Grey_ATEX hover:bg-atex_light_orange 
+        hover:text-atex_orange cursor-pointer"
+          [ngClass]="{ 'text-atex_orange bg-atex_light_orange': filialsActive.isActive}">
+
+          <div class="flex flex-col">
+            <div class="flex items-center gap-5 text-sm font-normal mb-2 " [routerLink]="['filiais']"
+              [routerLinkActive]="'text-atex_orange bg-atex_light_orange'" #filialsActive="routerLinkActive">
+              <img src="assets/icons/calendar.svg" *ngIf="filialsActive.isActive" alt="Contratos icon">
+              <img src="assets/icons/calendar-gray.svg" *ngIf="!filialsActive.isActive" alt="Contratos cinza icon">
+              <div class="flex items-center gap-2">
+                <span>Filiais</span>
+                <img src="assets/icons/down.svg" alt="" *ngIf="filialsActive.isActive">
+              </div>
+            </div>
+            <div *ngIf="filialsActive.isActive">
+              <ul class="flex flex-col gap-2">
+                <li [routerLink]="['filiais/representantes']" routerLinkActive="font-bold">Representantes Comerciais</li>
+                <li [routerLink]="['filiais/unidades']" routerLinkActive="font-bold">Unidades de Distribuição</li>
+                <li [routerLink]="['filiais/tecnicos']" routerLinkActive="font-bold">Técnicos da Filial</li>
+              </ul>
+            </div>
+          </div>
+
+        </li>
+
+  
 
       </ul>
     </nav>
