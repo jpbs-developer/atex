@@ -1,3 +1,5 @@
+import { DevolutionsDetailsComponent } from './devolutions-details/devolutions-details.component';
+import { WithdrawDetailsComponent } from './withdraw-details/withdraw-details.component';
 import { DevolutionsComponent } from './devolutions/devolutions.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { SchedulesComponent } from './schedules.component';
@@ -11,7 +13,10 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'retiradas', pathMatch: 'full' },
       { path: 'retiradas', component: WithdrawComponent },
+      { path: 'retiradas/retirada/:id', component: WithdrawDetailsComponent },
       { path: 'devolucoes', component: DevolutionsComponent },
+      { path: 'devolucoes/devolucao/:id', component: DevolutionsDetailsComponent },
+
     ],
   },
 ];
