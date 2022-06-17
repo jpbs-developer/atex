@@ -1,3 +1,4 @@
+import { RequestHistoryComponent } from './request-history/request-history.component';
 import { ContractDetailsComponent } from './contract-details/contract-details.component';
 import { ContractsComponent } from './contracts.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,16 @@ const routes: Routes = [
     component: ContractsComponent,
     title: 'Contratos',
   },
-  { path: 'contrato/:id', component: ContractDetailsComponent },
+  {
+    path: 'contrato/:id',
+    component: ContractDetailsComponent,
+    title: 'Contratos - Produtos',
+  },
+  {
+    path: 'solicitacoes/:id',
+    component: RequestHistoryComponent,
+    title: 'Contratos - Solicitações',
+  },
 ];
 
 @NgModule({

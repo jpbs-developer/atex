@@ -12,4 +12,6 @@ export class ContractDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  
 }

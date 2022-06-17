@@ -79,7 +79,7 @@
                     <img [matMenuTriggerFor]="menu" src="assets/icons/actions.svg" alt="" class="cursor-pointer">
                     <mat-menu #menu="matMenu">
                         <button mat-menu-item [routerLink]="['contrato', 1]">Ver todos os produtos</button>
-                        <button mat-menu-item>Ver histórico de solicitações</button>
+                        <button mat-menu-item [routerLink]="['solicitacoes', 1]">Ver histórico de solicitações</button>
                     </mat-menu>
                 </td>
             </ng-container>

@@ -1,0 +1,67 @@
+<div class="bg-white col-span-9 py-10 px-3 h-full">
+    <h2 class="text-Dark_Grey_ATEX text-xl font-bold mb-5">Histórico de Solicitações: Contrato 12345678910 </h2>
+    <div class="flex items-center gap-3">
+        <mat-form-field class="no-padding w-1/3">
+            <mat-label>Buscar...</mat-label>
+            <input type="text" matInput>
+            <mat-icon class="text-atex_orange" matSuffix>search</mat-icon>
+        </mat-form-field>
+        <div class="flex items-center flex-col relative">
+            <div class="hidden">
+                <mat-form-field appearance="fill">
+                    <mat-label>First campaign</mat-label>
+                    <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker" #datePicker>
+                        <input matStartDate placeholder="Start date" formControlName="start">
+                        <input matEndDate placeholder="End date" formControlName="end">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+
+            <div class="bg-atex_light_orange p-3 items-center justify-center rounded-xl cursor-pointer"
+                (click)="openCalendar()">
+                <img src="assets/icons/calendar.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-5">
+        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z0 w-full">
+            <ng-container matColumnDef="contract">
+                <th mat-header-cell *matHeaderCellDef> Contrato </th>
+                <td mat-cell *matCellDef="let element"> 593321756 </td>
+            </ng-container>
+            <ng-container matColumnDef="name_of_work">
+                <th mat-header-cell *matHeaderCellDef> Nome da Obra </th>
+                <td mat-cell *matCellDef="let element"> Edifício Martinelli </td>
+            </ng-container>
+            <ng-container matColumnDef="gerente">
+                <th mat-header-cell *matHeaderCellDef> Gerente de Filial </th>
+                <td mat-cell *matCellDef="let element"> Ivan Filho </td>
+            </ng-container>
+            <ng-container matColumnDef="movimentation">
+                <th mat-header-cell *matHeaderCellDef> Movimentação </th>
+                <td mat-cell *matCellDef="let element"> Retirada </td>
+            </ng-container>
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Data </th>
+                <td mat-cell *matCellDef="let element"> 09.07.21 </td>
+            </ng-container>
+
+            <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element"> <p class="text-atex_orange">Produtos do Contrato</p> </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay" class="bg-black_atex text-white text-sm font-bold">
+            </tr>
+            <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row ">
+            </tr>
+        </table>
+
+    </section>
+
+</div>
